@@ -39,8 +39,7 @@ def use_setpLR(param):
 
 
 def read_orthogonal_array_row_i(num_row):
-    #fp = open('./database/orthogonal_array.csv', 'r')
-    fp = open('./database/ternary_final_array.csv', 'r')
+    fp = open('./database/orthogonal_array.csv', 'r')
     array = fp.readlines()
     fp.close()
 
