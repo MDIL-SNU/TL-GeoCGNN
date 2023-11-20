@@ -1,0 +1,2 @@
+embedding,embedding,conv,conv,conv,conv,conv,MLP_psi2n,MLP_psi2n,MLP_psi2n,MLP_psi2n,MLP_psi2n,lr
+1,1,0,0,0,0,1,1,1,1,0,0,0.75
