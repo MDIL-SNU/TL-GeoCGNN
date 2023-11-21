@@ -14,8 +14,8 @@ Then, change `process_geo_CGNN.py` with the one in this repository.
 The basic method of running GeoCGNN is already well described in https://github.com/Tinystormjojo/geo-CGNN  
 Major difference of the code is
 - It can now selectively freeze the layers of `embedding` and `gated convolution`.
-- It can apply different learning rate in `embedding`, `gated convolution` and `output block`.
+- It can apply different learning rate in `embedding`, `gated convolution` and `output block`.  
 (More details about each part of the model can be found in [1])
 
 ## Reference
-[1] GeoCGNN
+[1] (https://doi.org/10.1038/s43246-021-00194-3) GeoCGNN
