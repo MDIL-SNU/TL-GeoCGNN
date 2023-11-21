@@ -5,3 +5,6 @@ This repository includes followings:
 * Example inputs for running
 * Database used for training model
 ```
+
+## Installation
+First, install GeoCGNN provided in https://github.com/Tinystormjojo/geo-CGNN
