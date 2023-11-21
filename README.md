@@ -18,4 +18,4 @@ Major difference of the code is
 (More details about each part of the model can be found in [1])
 
 ## Reference
-[1] (https://doi.org/10.1038/s43246-021-00194-3) GeoCGNN
+[1] : (https://doi.org/10.1038/s43246-021-00194-3) GeoCGNN
