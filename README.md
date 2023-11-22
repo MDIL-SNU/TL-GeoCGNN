@@ -52,12 +52,14 @@ For argument `--orthogonal_row`, row number for testing should be provided.
 
 ## Updating atomization energy
 For further update in Materials Project[2], updating atomization energy might be necessary.  
-To update specific Materials Project id, (for example, `mp-1234`)  
+To update specific Materials Project id, (for example, `mp-1234`)
+  
 `python update_atomization.py --id mp-1234`
   
-To update every database,  
+To update every database,
+  
 `python update_atomization.py --all`
 
 ## Reference
-[1] : https://doi.org/10.1038/s43246-021-00194-3
-[2] : 
+[1] : https://doi.org/10.1038/s43246-021-00194-3  
+[2] : https://next-gen.materialsproject.org/
