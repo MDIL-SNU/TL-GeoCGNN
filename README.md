@@ -1,4 +1,4 @@
-# Melting-point-prediction
+# TL-GeoCGNN
 ## Features
 This repository includes followings:
   
