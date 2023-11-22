@@ -25,7 +25,7 @@ Please write the name of the module at the first row for each corresponding colu
 Each layer would be frozen if corresponding column is 1, trainable if 0.  
   
 Additionally, please add column named `lr` for applying different learning rate.  
-Value in this column would be multiplied to original learning rate in `embedding`, `gated convolution`.  
+Value in this column would be multiplied to original learning rate in `embedding` and `gated convolution`.  
 Multiple learning rate is implemented for Adam optimizer.
   
 For example in model with 2 gated convolution layers,  
