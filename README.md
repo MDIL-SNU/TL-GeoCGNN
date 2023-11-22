@@ -13,7 +13,7 @@ This repository includes followings:
 
 ## Usage
 ### Preparation of inputs
-The basic method of running GeoCGNN is already well described in https://github.com/Tinystormjojo/geo-CGNN  
+The basic method of running GeoCGNN is described in https://github.com/Tinystormjojo/geo-CGNN  
 Key modifications in the code include:
 - Selective freezing of `embedding` and `gated convolution` layers
 - Application of different learning rate in `embedding`, `gated convolution` and `output block`.
