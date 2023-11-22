@@ -8,36 +8,36 @@ This repository includes followings:
 
 
 ## Installation
-First, install GeoCGNN provided in https://github.com/Tinystormjojo/geo-CGNN  
-Then, change `process_geo_CGNN.py` with the one in this repository.
+1. Install GeoCGNN from https://github.com/Tinystormjojo/geo-CGNN
+2. Change `process_geo_CGNN.py` with the one in this repository.
 
 ## Usage
 ### Preparation of inputs
 The basic method of running GeoCGNN is already well described in https://github.com/Tinystormjojo/geo-CGNN  
-Major difference of the code is
-- It can now selectively freeze the layers of `embedding` and `gated convolution`.
-- It can apply different learning rate in `embedding`, `gated convolution` and `output block`.
+Key modifications in the code include:
+- Selective freezing of `embedding` and `gated convolution` layers
+- Application of different learning rate in `embedding`, `gated convolution` and `output block`.
   
 (More details about each part of the model can be found in [1])  
 
-To utilize these features, prepare some rows to be tested in `data/orthogonal_array.csv`.  
-Please write the name of the module at the first row for each corresponding column.  
-Each layer would be frozen if corresponding column is 1, trainable if 0.  
+To utilize these features:  
+1. Prepare rows to be tested in `data/orthogonal_array.csv`.  
+2. Write the names of the modules at the first row for each corresponding column.  
+3. Each layer would be frozen if corresponding column is 1, trainable if 0.
+4. Add a column named `lr` for applying different learning rates.
+5. Value in this column would be multiplied to original learning rate in `embedding` and `gated convolution`.  
+(Multiple learning rate is implemented for Adam optimizer.)
   
-Additionally, please add column named `lr` for applying different learning rate.  
-Value in this column would be multiplied to original learning rate in `embedding` and `gated convolution`.  
-Multiple learning rate is implemented for Adam optimizer.
-  
-For example in model with 2 gated convolution layers,  
+Example for a model with 2 gated convolution layers:  
 |embedding|embedding|conv|conv|MLP_psi2n|MLP_psi2n|lr|
 |---|---|---|---|---|---|---|
 |1|0|0|1|1|0|0.75|
 
-- First layer of `embedding` module
-- `conv` module in second `gated convolution` layer
-- `MLP_psi2n` module in first `gated convolution` layer
-  
-would be frozen, while other layers remain trainable but with learning rate reduced by 0.75 times.  
+- First layer of `embedding` module is frozen.
+- `conv` module in second `gated convolution` layer is frozen.
+- `MLP_psi2n` module in first `gated convolution` layer is frozen.
+- Other layers remain trainable, but with learning rate reduced by 0.75 times.
+
 Please provide appropriate orthogonal array depending on your hyperparameter selection.  
 (Note that second column of embedding corresponds to activation function, and freezing it is only meaningful when using parametric activations.)
 
