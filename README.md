@@ -5,6 +5,7 @@ This repository includes followings:
 - Modified python code of GeoCGNN (process_geo_CGNN.py)
 - Example inputs for running (database/cif/, database/npz/, database/targets_melting.csv, database/orthogonal_array.csv, pre_trained/pre_trained_model.pth)
 - Database used for training model (database/targets_atomization.csv, database/forumla_CAS.csv)
+- Code for updating atomization energy database (database/update_atomization.py)
 
 
 ## Installation
@@ -49,5 +50,14 @@ python process_geo_CGNN.py --n_hidden_feat 192 --n_GCN_feat 192 --cutoff 8 --max
 For argument `--pre_trained_model_path`, path for pre-trained model should be provided.  
 For argument `--orthogonal_row`, row number for testing should be provided.
 
+## Updating atomization energy
+For further update in Materials Project[2], updating atomization energy might be necessary.  
+To update specific Materials Project id, (for example, `mp-1234`)
+`python update_atomization.py --id mp-1234`
+  
+To update every database,
+`python update_atomization.py --all`
+
 ## Reference
 [1] : https://doi.org/10.1038/s43246-021-00194-3
+[2] : 
