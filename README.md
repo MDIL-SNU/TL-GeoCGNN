@@ -18,7 +18,23 @@ Major difference of the code is
   
 (More details about each part of the model can be found in [1])  
 
-To utilize these features, 
+To utilize these features, prepare some rows to be tested in `data/orthogonal_array.csv`.  
+Please write the name of the module at the first row for each corresponding column.  
+Each layer would be frozen if corresponding column is 1, trainable if 0.  
+  
+Additionally, please add column named `lr` for applying different learning rate.  
+Value in this column would be multiplied to original learning rate in `embedding`, `gated convolution`.
+Multiple learning rate is implemented for Adam optimizer.
+  
+For example in 2 gated convolution model,  
+|embedding|embedding|conv|conv|MLP_psi2n|MLP_psi2n|lr|
+|---|---|---|---|---|---|---|
+|1|0|0|1|1|0|0.75|
+
+- First layer of `embedding` module
+- `conv` module in second `gated convolution` module
+- `MLP_psi2n` module in first `gated convolution` module
+would be frozen, while other layers remain trainable and learning rate would be reduced by 0.75 times.
 
 ## Reference
 [1] : https://doi.org/10.1038/s43246-021-00194-3
