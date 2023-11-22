@@ -32,9 +32,15 @@ For example in 2 gated convolution model,
 |1|0|0|1|1|0|0.75|
 
 - First layer of `embedding` module
-- `conv` module in second `gated convolution` module
-- `MLP_psi2n` module in first `gated convolution` module  
-would be frozen, while other layers remain trainable and learning rate would be reduced by 0.75 times.
+- `conv` module in second `gated convolution` layer
+- `MLP_psi2n` module in first `gated convolution` layer  
+would be frozen, while other layers remain trainable with learning rate reduced by 0.75 times.
+Please provide appropriate orthogonal array depending on the hyperparameter selection.
+
+For example run, use following command  
+```
+python process_geo_CGNN.py --n_hidden_feat 192 --n_GCN_feat 192 --cutoff 8 --max_nei 12 --n_MLP_LR 3 --num_epochs 300 --batch_size 300 --target_name formation_energy_per_atom --milestones 250 --gamma 0.1 --test_ratio 0.2 --datafile_name my_graph_data_MEGNetPrim_8_12_100_ --database CGCNN_Ef --n_grid_K 4 --n_Gaussian 64 --N_block 5 --lr 1e-3 &
+```
 
 ## Reference
 [1] : https://doi.org/10.1038/s43246-021-00194-3
