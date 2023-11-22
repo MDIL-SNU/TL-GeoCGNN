@@ -41,7 +41,7 @@ Please provide appropriate orthogonal array depending on your hyperparameter sel
   
 For example run, use following command.  
 ```
-python process_geo_CGNN.py --n_hidden_feat 192 --n_GCN_feat 192 --cutoff 8 --max_nei 12 --n_MLP_LR 3 --num_epochs 300 --batch_size 3 --target_name melting_point --milestones 250 --gamma 0.1 --test_ratio 0.2 --datafile_name my_graph_data_MP_8_12_100 --database melting --n_grid_K 4 --n_Gaussian 64 --N_block 5 --lr 1e-3 --load_model --pre_trained_model_path pre_trained/pre_trained_model.pth --orthogonal_row 1 &
+python process_geo_CGNN.py --n_hidden_feat 192 --n_GCN_feat 192 --cutoff 8 --max_nei 12 --n_MLP_LR 3 --num_epochs 300 --batch_size 3 --target_name melting_point --milestones 250 --gamma 0.1 --test_ratio 0.2 --datafile_name my_graph_data_MP_8_12_100 --database melting --n_grid_K 4 --n_Gaussian 64 --N_block 5 --lr 1e-3 --load_model --pre_trained_model_path pre_trained/pre_trained_model.pth --orthogonal_row 1
 ```
 For argument `--pre_trained_model_path`, path for pre-trained model should be provided.  
 For argument `--orthogonal_row`, row number for testing should be provided.
