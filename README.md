@@ -33,7 +33,7 @@ For example in 2 gated convolution model,
 
 - First layer of `embedding` module
 - `conv` module in second `gated convolution` module
-- `MLP_psi2n` module in first `gated convolution` module
+- `MLP_psi2n` module in first `gated convolution` module  
 would be frozen, while other layers remain trainable and learning rate would be reduced by 0.75 times.
 
 ## Reference
