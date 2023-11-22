@@ -35,7 +35,7 @@ For example in 2 gated convolution model,
 - `conv` module in second `gated convolution` layer
 - `MLP_psi2n` module in first `gated convolution` layer
   
-would be frozen, while other layers remain trainable with learning rate reduced by 0.75 times.  
+would be frozen, while other layers remain trainable but with learning rate reduced by 0.75 times.  
 Please provide appropriate orthogonal array depending on your hyperparameter selection.  
 (Note that second column of embedding corresponds to activation function, and freezing it is only meaningful when using parametric activations.)
   
