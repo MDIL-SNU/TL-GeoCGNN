@@ -15,6 +15,7 @@ The basic method of running GeoCGNN is already well described in https://github.
 Major difference of the code is
 - It can now selectively freeze the layers of `embedding` and `gated convolution`.
 - It can apply different learning rate in `embedding`, `gated convolution` and `output block`.  
+
 (More details about each part of the model can be found in [1])  
 
 To utilize these features, 
