@@ -2,7 +2,7 @@
 This repository includes followings:
   
 - Modified python code of GeoCGNN (process_geo_CGNN.py)
-- Example inputs for running (database/cif/, database/npz/, database/targets_melting.csv, database/orthogonal_array.csv)
+- Example inputs for running (database/cif/, database/npz/, database/targets_melting.csv, database/orthogonal_array.csv, pre_trained/pre_trained_model.pth)
 - Database used for training model (database/targets_atomization.csv, database/forumla_CAS.csv)
 
 
