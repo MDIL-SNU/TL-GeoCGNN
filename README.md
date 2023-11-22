@@ -26,7 +26,7 @@ Additionally, please add column named `lr` for applying different learning rate.
 Value in this column would be multiplied to original learning rate in `embedding`, `gated convolution`.  
 Multiple learning rate is implemented for Adam optimizer.
   
-For example in 2 gated convolution model,  
+For example in model with 2 gated convolution layers,  
 |embedding|embedding|conv|conv|MLP_psi2n|MLP_psi2n|lr|
 |---|---|---|---|---|---|---|
 |1|0|0|1|1|0|0.75|
