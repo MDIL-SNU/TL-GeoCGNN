@@ -10,7 +10,7 @@ This repository includes followings:
 First, install GeoCGNN provided in https://github.com/Tinystormjojo/geo-CGNN  
 Then, change `process_geo_CGNN.py` with the one in this repository.
 
-## Running the code
+## Preparation of inputs
 The basic method of running GeoCGNN is already well described in https://github.com/Tinystormjojo/geo-CGNN  
 Major difference of the code is
 - It can now selectively freeze the layers of `embedding` and `gated convolution`.
@@ -38,7 +38,8 @@ For example in 2 gated convolution model,
 would be frozen, while other layers remain trainable but with learning rate reduced by 0.75 times.  
 Please provide appropriate orthogonal array depending on your hyperparameter selection.  
 (Note that second column of embedding corresponds to activation function, and freezing it is only meaningful when using parametric activations.)
-  
+
+## Running the code
 For example run, use following command.  
 ```
 python process_geo_CGNN.py --n_hidden_feat 192 --n_GCN_feat 192 --cutoff 8 --max_nei 12 --n_MLP_LR 3 --num_epochs 300 --batch_size 3 --target_name melting_point --milestones 250 --gamma 0.1 --test_ratio 0.2 --datafile_name my_graph_data_MP_8_12_100 --database melting --n_grid_K 4 --n_Gaussian 64 --N_block 5 --lr 1e-3 --load_model --pre_trained_model_path pre_trained/pre_trained_model.pth --orthogonal_row 1
