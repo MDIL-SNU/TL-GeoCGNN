@@ -1,4 +1,5 @@
 # TL-GeoCGNN
+Code and example database for employing transfer learning in GeoCGNN
 ## Features
 This repository includes the following:
   
