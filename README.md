@@ -30,6 +30,8 @@ The basic method of running GeoCGNN is described in https://github.com/Tinystorm
 Key modifications in the code include:
 - Selective freezing of `embedding` and `gated convolution` layers
 - Application of different learning rates in `embedding`, `gated convolution`, and `output block`.
+
+More details about each part of the model can be found in [1]  
   
 To utilize these features:  
 1. Prepare rows to be tested in `data/orthogonal_array.csv`.  
@@ -58,8 +60,6 @@ python process_geo_CGNN.py --n_hidden_feat 192 --n_GCN_feat 192 --cutoff 8 --max
 ```
 For argument `--pre_trained_model_path`, the path for the pre-trained model should be provided.  
 For argument `--orthogonal_row`, the row number for testing should be provided.
-
-More details about each part of the model can be found in [1]  
 
 ## Updating atomization energy
 For further updates in the Materials Project[2], updating atomization energy might be necessary.  
